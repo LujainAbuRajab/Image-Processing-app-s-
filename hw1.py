@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-image = cv2.imread('flower_gray.jpg', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread(r'assets\flower_gray.jpg', cv2.IMREAD_GRAYSCALE)
 
 size = image.shape
 thresholded_image = image.copy()

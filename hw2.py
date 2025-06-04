@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def sobel_edge_detection(image, threshold=100, apply_smoothing=False):
 
-    if apply_smoothing:
+    if apply_smoothing: #true
         image = cv2.GaussianBlur(image, (5, 5), 0)
 
     sobel_x = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=3)
@@ -19,9 +19,8 @@ def sobel_edge_detection(image, threshold=100, apply_smoothing=False):
  
 
 if __name__ == "__main__":
-    
-    img = "LujainAbuRajab_HW2\flower_gray.jpg"  
-    gray = cv2.imread(img)
+      
+    gray = cv2.imread(r'assets\flower_gray.jpg')
     
     # Sobel edge detection
     edges, Threshold = sobel_edge_detection(gray, threshold=100, apply_smoothing=False)

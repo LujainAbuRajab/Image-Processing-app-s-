@@ -3,6 +3,8 @@
         "figsize",
         "imread",
         "imshow",
+        "ksize",
+        "sobel",
         "thresholded",
         "Thresholding"
     ]
