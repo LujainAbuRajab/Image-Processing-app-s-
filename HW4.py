@@ -9,7 +9,7 @@ plt.figure(figsize=(12, 8))
 
 # Step 1: Grayscale
 plt.subplot(2, 3, 1)
-plt.imshow(gray, cmap='gray')
+plt.imshow(gray, cmap='gray')   # black & white rendering
 plt.title("Grayscale")
 
 # Step 2: Thresholding
@@ -31,10 +31,10 @@ plt.imshow(closed, cmap='gray')
 plt.title("Morphology")
 
 # Step 4: Apply white background mask
-result = np.ones_like(img) * 255    # new array with the same shape and type but filled with `1`s
+result = np.ones_like(img) * 255    # new array with the same shape and type but filled with `1`s * 255
 result[closed == 255] = img[closed == 255] # Wherever the mask is white (255) -> copy original pixels (coins)
 
-plt.subplot(2, 3, 4)
+plt.subplot(2, 3, 4) 
 plt.imshow(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
 plt.title("Step 4: Final Result")
 
